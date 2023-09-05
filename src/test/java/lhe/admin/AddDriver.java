@@ -79,19 +79,4 @@ public class AddDriver extends BaseTest {
         addDriverPage.clickToSaveButton();
         assertTrue(addDriverPage.isPopupSuccessDisplayed());
     }
-    @Test
-    public void TC_04_Add_New_Driver_Success(Method method) {
-        ExtentTestManager.startTest(method.getName(), "Add new Shipment In Success");
-        goToHomPage();
-        transportHomePage = homePage.clickTransportButton();
-        driverHomePage = transportHomePage.clickToTabDriver();
-        addDriverPage = driverHomePage.clickToAddNewDriverButton();
-        addDriverPage.inputDynamic("Nhập họ và tên", name);
-        addDriverPage.inputDynamic("Nhập số điện thoại", phoneNumber);
-        addDriverPage.inputDynamic("Nhập số CCCD/CMT", idCard);
-        addDriverPage.inputDynamic("Nhập Email", email);
-        addDriverPage.inputDriverImg(driverImage);
-        addDriverPage.clickToSaveButton();
-        assertTrue(addDriverPage.isPopupSuccessDisplayed());
-    }
 }
