@@ -35,13 +35,11 @@ public class DetailZonePageObject extends BasePage {
     }
 
     public String getDetailAreaName() {
-        waitForLoadingIconInvisible();
         waitForElementVisible(AdminHomePageUI.DETAIL_AREA_NAME);
         return getElementText(AdminHomePageUI.DETAIL_AREA_NAME);
     }
 
     public String getDetailProvinceCityName() {
-        waitForLoadingIconInvisible();
         waitForElementVisible(AdminHomePageUI.DETAIL_PROVINCE_CITY_NAME);
         return getElementText(AdminHomePageUI.DETAIL_PROVINCE_CITY_NAME);
     }
@@ -53,7 +51,6 @@ public class DetailZonePageObject extends BasePage {
     }
 
     public String getDetailDistributorID() {
-        waitForLoadingIconInvisible();
         waitForElementVisible(AdminHomePageUI.DETAIL_DISTRIBUTOR_ID);
         return getElementText(AdminHomePageUI.DETAIL_DISTRIBUTOR_ID);
     }
