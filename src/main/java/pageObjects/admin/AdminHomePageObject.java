@@ -9,6 +9,7 @@ import pageObjects.admin.product.ProductHomePageObject;
 import pageObjects.admin.transport.TransportHomePageObject;
 import pageObjects.admin.userManagement.UserManagementHomePageObject;
 import pageUIs.admin.AdminHomePageUI;
+import pageObjects.admin.zonearea.ZoneAreaHomePageObject;
 
 import static commons.GlobalConstants.SHORT_TIMEOUT;
 
@@ -65,5 +66,12 @@ public class AdminHomePageObject extends BasePage {
         waitForElementClickable(AdminHomePageUI.DOCUMENT_MANAGEMENT);
         clickToElement(AdminHomePageUI.DOCUMENT_MANAGEMENT);
         return new DocumentHomePageObject();
+    }
+
+    public ZoneAreaHomePageObject clickZoneAreaManagementButton() {
+        sleepInSecond(SHORT_TIMEOUT);
+        waitForElementClickable(AdminHomePageUI.ZONE_AREA_MANAGEMENT);
+        clickToElement(AdminHomePageUI.ZONE_AREA_MANAGEMENT);
+        return new ZoneAreaHomePageObject();
     }
 }

@@ -37,7 +37,7 @@ public class BaseTest {
         DriverManager.setDriver(driver);
     }
 
-    @AfterClass
+//    @AfterClass
     public static void closeDriver() {
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0)); //Reset timeout
         try {
