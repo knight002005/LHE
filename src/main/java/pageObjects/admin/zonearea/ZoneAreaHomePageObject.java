@@ -1,8 +1,6 @@
 package pageObjects.admin.zonearea;
 
 import commons.BasePage;
-import pageObjects.admin.document.GroupDocumentPageObject;
-import pageObjects.admin.document.ListDocumentPageObject;
 import pageUIs.admin.AdminHomePageUI;
 
 import static commons.GlobalConstants.SHORT_TIMEOUT;
@@ -21,5 +19,19 @@ public class ZoneAreaHomePageObject extends BasePage {
         waitForElementClickable(AdminHomePageUI.CREATE_AREA_BUTTON);
         clickToElement(AdminHomePageUI.CREATE_AREA_BUTTON);
         return new CreateAreaPageObject();
+    }
+
+    public ZoneAreaHomePageObject clickZoneButton() {
+        sleepInSecond(SHORT_TIMEOUT);
+        waitForElementClickable(AdminHomePageUI.ZONE_BUTTON);
+        clickToElement(AdminHomePageUI.ZONE_BUTTON);
+        return new ZoneAreaHomePageObject();
+    }
+
+    public CreateZonePageObject clickCreateZoneButton() {
+        sleepInSecond(SHORT_TIMEOUT);
+        waitForElementClickable(AdminHomePageUI.CREATE_ZONE_BUTTON);
+        clickToElement(AdminHomePageUI.CREATE_ZONE_BUTTON);
+        return new CreateZonePageObject();
     }
 }

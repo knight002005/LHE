@@ -303,17 +303,38 @@ public class AdminHomePageUI {
     public static final String SAVE_DRIVER_BUTTON = "//p[text()='Lưu']";
     public static final String MESSAGE_POPUP_ERROR = "//p[text()='Tạo tài xế không thành công.']";
     public static final String MESSAGE_POPUP_SUCCESS = "//p[text()='Tạo tài xế thành công']";
+
+    //Zone Area
     public static final String ZONE_AREA_MANAGEMENT = "//p[contains(text(),'Quản lý khu vực')]/preceding-sibling::div";
     public static final String ZONE_AREA_TITLE = "//span[contains(text(),'Quản lý vùng/khu vực')]";
     public static final String CREATE_AREA_BUTTON = "//button[@type='button']";
     public static final String INPUT_AREA_NAME_FIELD = "//input[@placeholder='Nhập tên vùng']";
     public static final String AREA_PROVINCE_CITY_DROP_LIST = "//input[@placeholder='Chọn Tỉnh/Thành phố']";
-    public static final String INPUT_NOTE_AREA_FIELD = "//textarea[@placeholder='Nhập ghi chú']";
+    public static final String INPUT_NOTE_FIELD = "//textarea[@placeholder='Nhập ghi chú']";
     public static final String AREA_PROVINCE_CITY = "(//ul[@role=\"listbox\"]/li)[1]";
-    public static final String CREATE_NEW_AREA_BUTTON = "//span[text()='Tạo mới']";
+//    public static final String CREATE_CREATE_NEW_BUTTON = "//span[text()='Tạo mới']";
     public static final String DETAIL_AREA_TITLE = "//p[text()='Thông tin vùng']";
     public static final String AREA_NAME = "//p[@class='p3 mb05']";
     public static final String PROVINCE_CITY_NAME = "//div[@class='f aic gap1 mt1 mb05']//span";
     public static final String AREA_NOTE = "//div[@class='f aic gap1']//span";
     public static final String AREA_PROVINCE_CITY_GET_TEXT = "//span[@class='vs__selected']";
+    public static final String ZONE_BUTTON = "//div[contains(text(),'Khu vực')]";
+    public static final String CREATE_ZONE_BUTTON = "//button[@type='button']";
+    public static final String INPUT_ZONE_NAME_FIELD = "//input[@placeholder='Nhập tên khu vực']";
+    public static final String AREA_DROP_LIST = "//input[@placeholder='Chọn vùng']";
+//    public static final String AREA = "//ul[@id='vs5__listbox']/li[contains(text(),])";
+    public static final String AREA = "(//ul[@role=\"listbox\"]/li)[1]";
+    public static final String AREA_NAME_CHOOSE = "//span[@class='vs__selected']";
+    public static final String ADD_DISTRIBUTOR = "//button[@class='btn mb15 btn__color--primary btn__size--default']";
+    public static final String DISTRIBUTOR_CHECKBOX = "(//input[@type='checkbox'])[1]";
+    public static final String ADD_DISTRIBUTOR_BUTTON = "//div[contains(text(),'Thêm')]/parent::button";
+    public static final String DETAIL_ZONE_TITLE = "//p[text()='Thông tin khu vực']";
+    public static final String ZONE_NAME = "//p[@class='p3']";
+    public static final String DETAIL_AREA_NAME = "//div[@class='f aic gap1 mt1']//span";
+    public static final String PROVINCE_CITY_NAME_CHOOSE = "//p[contains(text(),'Các Tỉnh/Thành phố')]/following-sibling::div//span[@class='vs__selected']";
+    public static final String DETAIL_PROVINCE_CITY_NAME = "//div[@class='f aic gap1 mt05']//span";
+    public static final String DISTRIBUTOR_NAME_CHOOSE = "(//div[@class='p5 mb025'])[1]";
+    public static final String DETAIL_DISTRIBUTOR_NAME = "//p[@class='p3 mb05']";
+    public static final String PROVINCE_CITY_ID_CHOOSE = "(//div[@class='p6 gray-5'])[1]/span";
+    public static final String DETAIL_DISTRIBUTOR_ID = "//p[@class='p3 mb05']/following-sibling::p";
 }

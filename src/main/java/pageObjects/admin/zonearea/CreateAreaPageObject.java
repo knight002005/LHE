@@ -20,8 +20,8 @@ public class CreateAreaPageObject extends BasePage {
     }
 
     public void inputNote(String note) {
-        waitForElementClickable(AdminHomePageUI.INPUT_NOTE_AREA_FIELD);
-        sendKeyToElement(AdminHomePageUI.INPUT_NOTE_AREA_FIELD, note);
+        waitForElementClickable(AdminHomePageUI.INPUT_NOTE_FIELD);
+        sendKeyToElement(AdminHomePageUI.INPUT_NOTE_FIELD, note);
     }
 
     public void clickProvinceCity() {
@@ -31,8 +31,8 @@ public class CreateAreaPageObject extends BasePage {
 
     public DetailAreaPageObject clickCreate() {
         sleepInSecond(SHORT_TIMEOUT);
-        waitForElementClickable(AdminHomePageUI.CREATE_NEW_AREA_BUTTON);
-        clickToElement(AdminHomePageUI.CREATE_NEW_AREA_BUTTON);
+        waitForElementClickable(AdminHomePageUI.CREATE_NEW_BUTTON);
+        clickToElement(AdminHomePageUI.CREATE_NEW_BUTTON);
         return new DetailAreaPageObject();
     }
 
