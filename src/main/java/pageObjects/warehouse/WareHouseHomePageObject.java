@@ -5,6 +5,8 @@ import driver.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import pageObjects.warehouse.export.WareHouseExportPageObject;
+import pageObjects.warehouse.receipt.WareHouseReceiptPageObject;
 import pageUIs.warehouse.WareHouseHomePageUI;
 import pageUIs.warehouse.WareHouseTransactionSlipPageUI;
 
@@ -21,9 +23,10 @@ public class WareHouseHomePageObject extends BasePage {
         return new WareHouseHomePageObject();
     }
 
-    public void clickExportNote() {
+    public WareHouseExportPageObject clickExportNote() {
         waitForElementVisible(WareHouseTransactionSlipPageUI.EXPORT_NOTE_ICON);
         clickToElement(WareHouseTransactionSlipPageUI.EXPORT_NOTE_ICON);
+        return new WareHouseExportPageObject();
     }
 
     public void clickViewExportNoteDetail() {
@@ -81,5 +84,11 @@ public class WareHouseHomePageObject extends BasePage {
         sendKeyToElement(REASON_EXPORT, "Nhà phân phối tạo đơn");
         WebElement enter = DriverManager.getDriver().findElement(By.xpath(REASON_EXPORT));
         enter.sendKeys(Keys.ENTER);
+    }
+
+    public WareHouseReceiptPageObject clickReceiptNote() {
+        waitForElementVisible(WareHouseTransactionSlipPageUI.RECEIPT_BUTTON);
+        clickToElement(WareHouseTransactionSlipPageUI.RECEIPT_BUTTON);
+        return new WareHouseReceiptPageObject();
     }
 }
