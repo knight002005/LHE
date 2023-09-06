@@ -33,6 +33,5 @@ public class TransactionSlip extends BaseTest {
         ExtentTestManager.startTest(method.getName(), "Go To Ware House Home Page");
         goToWareHouseHomePage();
         whTransactionSlipPage = whHomePage.clickTransactionSlipButton();
-        whTransactionSlipPage.clickExportNote();
     }
 }

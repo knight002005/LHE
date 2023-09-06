@@ -14,6 +14,7 @@ public class DetailAreaPageObject extends BasePage {
     }
 
     public String getAreaName() {
+        waitForLoadingIconInvisible();
         waitForElementVisible(AdminHomePageUI.AREA_NAME);
         return getElementText(AdminHomePageUI.AREA_NAME);
     }

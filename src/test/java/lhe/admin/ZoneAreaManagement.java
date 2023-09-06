@@ -5,16 +5,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.admin.AdminHomePageObject;
 import pageObjects.admin.AdminLoginPageObject;
-import pageObjects.admin.document.EnactDocumentPageObject;
-import pageObjects.admin.zonearea.CreateAreaPageObject;
-import pageObjects.admin.zonearea.DetailAreaPageObject;
-import pageObjects.admin.zonearea.ZoneAreaHomePageObject;
+import pageObjects.admin.zonearea.*;
 import reportConfig.ExtentTestManager;
 
 import java.lang.reflect.Method;
 
 import static commons.BasePage.getRandomInt;
-import static commons.BasePage.getRandomString;
 import static commons.GlobalConstants.ADMIN_LOGIN;
 import static commons.GlobalConstants.PROJECT_PATH;
 import static org.testng.Assert.assertEquals;
@@ -24,10 +20,13 @@ public class ZoneAreaManagement extends BaseTest {
     private String browserName;
     private AdminLoginPageObject loginPage;
     private AdminHomePageObject homePage;
-    private ZoneAreaHomePageObject zoneAreaHomePage;
+    private ZoneAreaHomePageObject zoneAreaHomePage, zoneHomePage;
     private CreateAreaPageObject createAreaPage;
+    private CreateZonePageObject createZonePage;
     private DetailAreaPageObject detailAreaPage;
-    public String areaName, note, documentName, fromDay, toDay, documentImage, provinceCityName;
+    private DetailZonePageObject detailZonePage;
+    private AddDistributorPageObject addDistributor;
+    public String areaName, note, zoneName, documentImage, provinceCityName, areaNameChoose, provinceCityNameChoose, distributorName, distributorIDChoose;
 
     @BeforeClass
     public void beforeClass() {
@@ -36,9 +35,7 @@ public class ZoneAreaManagement extends BaseTest {
         homePage = loginPage.goToAdminHomePage();
         areaName = "Vùng " + getRandomInt();
         note = "Note";
-        documentName = "DOC-" + getRandomString();
-        fromDay = getCurrentDay();
-        toDay = "12/12/2023";
+        zoneName = "Khu vực-" + getRandomInt();
         documentImage = PROJECT_PATH + "\\uploadFiles\\ProductImage.jpg";
     }
 
@@ -56,8 +53,8 @@ public class ZoneAreaManagement extends BaseTest {
     }
 
     @Test
-    public void TC_02_Go_To_Zone_Area(Method method) {
-        ExtentTestManager.startTest(method.getName(), "Add Zone Area Management");
+    public void TC_02_Create_Area(Method method) {
+        ExtentTestManager.startTest(method.getName(), "Add Area Management");
         goToHomePage();
         zoneAreaHomePage = homePage.clickZoneAreaManagementButton();
         createAreaPage = zoneAreaHomePage.clickCreateAreaButton();
@@ -71,5 +68,34 @@ public class ZoneAreaManagement extends BaseTest {
         assertEquals(detailAreaPage.getAreaName(),areaName);
         assertEquals(detailAreaPage.getProvinceCityName(),provinceCityName);
         assertEquals(detailAreaPage.getNote(),note);
+    }
+
+    @Test
+    public void TC_03_Create_Zone(Method method) {
+        ExtentTestManager.startTest(method.getName(), "Add Zone Area Management");
+        goToHomePage();
+        zoneAreaHomePage = homePage.clickZoneAreaManagementButton();
+        zoneHomePage = zoneAreaHomePage.clickZoneButton();
+        createZonePage = zoneHomePage.clickCreateZoneButton();
+        createZonePage.inputZoneName(zoneName);
+        createZonePage.clickAreaDropList();
+        createZonePage.clickArea();
+        areaNameChoose = createZonePage.getAreaName();
+        createZonePage.clickProvinceCityDropList();
+        createZonePage.clickProvinceCity();
+        provinceCityNameChoose = createZonePage.getProvinceCityName();
+        createZonePage.inputNote(note);
+        addDistributor = createZonePage.clickAddDistributor();
+        addDistributor.clickDistributorCheckBox();
+        distributorName = addDistributor.getDistributorName();
+        distributorIDChoose = addDistributor.getDistributorID();
+        addDistributor.clickAddButton();
+        detailZonePage = createZonePage.clickCreate();
+        assertTrue(detailZonePage.isDetailZoneDisplayed());
+        assertEquals(detailZonePage.getZoneName(),zoneName);
+        assertEquals(detailZonePage.getDetailAreaName(),areaNameChoose);
+        assertEquals(detailZonePage.getDetailProvinceCityName(),provinceCityNameChoose);
+        assertEquals(detailZonePage.getDetailDistributorName(), distributorName);
+        assertEquals(detailZonePage.getDetailDistributorID(), distributorIDChoose);
     }
 }
