@@ -8,6 +8,7 @@ import pageObjects.admin.order.OrderHomePageObject;
 import pageObjects.admin.product.ProductHomePageObject;
 import pageObjects.admin.transport.TransportHomePageObject;
 import pageObjects.admin.userManagement.UserManagementHomePageObject;
+import pageObjects.staff.StaffHomePageObject;
 import pageUIs.admin.AdminHomePageUI;
 import pageObjects.admin.zonearea.ZoneAreaHomePageObject;
 
@@ -73,5 +74,16 @@ public class AdminHomePageObject extends BasePage {
         waitForElementClickable(AdminHomePageUI.ZONE_AREA_MANAGEMENT);
         clickToElement(AdminHomePageUI.ZONE_AREA_MANAGEMENT);
         return new ZoneAreaHomePageObject();
+    }
+    public void clickStaffHomePageButton() {
+        sleepInSecond(SHORT_TIMEOUT);
+        waitForElementClickable(AdminHomePageUI.STAFF_MANAGEMENT);
+        clickToElement(AdminHomePageUI.STAFF_MANAGEMENT);
+    }
+
+    public StaffHomePageObject clickStaffIcon() {
+        waitForElementClickable(AdminHomePageUI.STAFF_ICON);
+        clickToElement(AdminHomePageUI.STAFF_ICON);
+        return new StaffHomePageObject();
     }
 }

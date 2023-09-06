@@ -8,7 +8,6 @@ public class AdminHomePageUI {
     public static final String BACK_BUTTON = "//span[text()='Quay lại']";
     public static final String CREATE_BUTTON = "//span[text()='Tạo tài khoản']";
     public static final String CLOSE_MODAL_BUTTON = "//p[text()='Đóng']";
-    public static final String BACK_TO_CREATE_DISTRIBUTOR_PAGE_BUTTON = "//button[@class='btn btn__color--primary btn__size--default']";
     public static final String DISTRIBUTOR_MANAGEMENT = "//img[@src='/_nuxt/img/NPP.81347e0.svg']";
     public static final String ADD_MEMBER_BUTTON = "//div[@class='npp-manager__container px1']/button";
     public static final String VIEW_DETAIL_DISTRIBUTOR_BUTTON = "//p[@class='p6 gray-5']";
@@ -66,10 +65,7 @@ public class AdminHomePageUI {
             "//p[contains(normalize-space(),'Nhân công')]//ancestor::div[contains(@class,'mb1')]//p[contains(normalize-space(),'Bạn cần điền vào mục này')]";
     public static final String ERROR_MESSAGE_EMPTY_TIME_IN =
             "//p[contains(normalize-space(),'Thời gian vào')]//ancestor::div[contains(@class,'mb1')]//p[contains(normalize-space(),'Bạn cần điền vào mục này')]";
-    public static final String ERROR_MESSAGE_EMPTY_REGION =
-            "//input[@placeholder='Chọn vùng']//ancestor::div[@class='input__content']/following-sibling::p";
-    public static final String ERROR_MESSAGE_EMPTY_AREA =
-            "//input[@placeholder='Chọn khu vực']//ancestor::div[@class='input__content']/following-sibling::p";
+
     public static final String ERROR_MESSAGE_ACCOUNT =
             "//input[@placeholder='VD: Số điện thoại của bạn']/parent::div/following-sibling::p";
     public static final String ERROR_MESSAGE_PASSWORD =
@@ -134,9 +130,8 @@ public class AdminHomePageUI {
     public static final String STORE_INPUT_VALUE = "//li[contains(normalize-space(),'Kho Cẩm Thượng')]";
     public static final String CHOOSE_PRODUCT_IN_STOCK_BUTTON = "//span[text()='Chọn sản phẩm trong kho sản phẩm']";
     public static final String ADD_PRODUCT_IN_EDIT_ORDER_BUTTON = "//button[@class='btn mb1 btn__color--primary btn__size--default']";
-    public static final String SEARCH_PRODUCT_INPUT = "//input[@placeholder='Tìm kiếm sản phẩm']";
+
     public static final String CHOOSE_PRODUCT_CHECKBOX = "//div[@class='f aic border border-radius-m px1 mb1 cursor'][1]//input";
-    public static final String CHOOSE_PRODUCT_ADD_NEW_CHECKBOX = "//div[text()=' Thạch rau câu phong cách Nhật Bản Kimikoko hihi 450g ']/parent::div/parent::div/div/div//input";
     public static final String CANCEL_PRODUCT_BUTTON = "//div[text()='Huỷ']";
     public static final String HELP_DESK_ICON = "//div[@class='helpdesk__icon up']";
     public static final String BELL_ICON = "//i[@class='v-icon bell']";
@@ -149,25 +144,20 @@ public class AdminHomePageUI {
     public static final String LIST_PAGE_BUTTON = "//p[text()='Trang danh sách']";
     public static final String VIEW_DETAIL_ORDER_BUTTON = "//p[text()='Chi tiết đơn']";
     public static final String APPROVE_BUTTON = "//p[text()='Phê duyệt']";
-    public static final String UPDATE_ORDER_BUTTON = "//span[text()='Cập nhật đơn hàng']";
-    public static final String ORDER_SUCCESS_TEXT = "//p[text()='Xác nhận đơn hàng thành công']";
     public static final String CANCEL_ORDER_MODAL_SUCCESS_BUTTON = "//p[text()='Đóng']";
     public static final String PROCESSING_BUTTON = "//div[@class='f gap1 aic jcb mb05']/div[contains(normalize-space(),'Đã xác nhận')]";
     public static final String VIEW_DETAIL_BUTTON = "//div[@class='order-wrapper'][1]";
     public static final String WAITING_FOR_APPROVE_BUTTON = "//div[@class='nav-tab__title--head f aic jcs']//div[contains(text(),'Chờ phê duyệt')]";
     public static final String REFUSE_ORDER_BUTTON = "//p[text()='Từ chối']";
-    public static final String NOTE_TEXT_AREA = "//textarea[@placeholder='Nhập vào đây']";
     public static final String CONFIRM_BUTTON = "//p[text()='Xác nhận']";
     public static final String FAILURE_BUTTON = "//div[@class='pl1 pr1 pt05 pb05 border-radius-m p5 status status-error']";
     public static final String DISTRIBUTOR_TEXT = "//div[@class='f ais jcc fdc']//p[@class='p3']";
-    public static final String ENTER_NOTE_TEXT = "//div[@class='gray-5 ph1 pb1']//p[contains(text(),'LHETest')]";
     public static final String STORE_TEXT = "//span[contains(text(),'Kho Kiên NPP')]";
     public static final String PRODUCT_NAME_TEXT = "//div[@class='card-product__name f aic jcb cursor px1 w100']//p[@class='p3 mb025']";
 
     // User Management Page
     public static final String USER_MANAGEMENT_BUTTON = "//img[@src='/_nuxt/img/staff.de48d86.svg']";
     public static final String ADD_NEW_USER_MANAGEMENT_BUTTON = "//div[@class='user-manager__search mb15']/button";
-    public static final String BACK_TO_LIST_DISTRIBUTOR_BUTTON = "//span[text()=' Quay lại trang chi tiết ']";
     public static final String ADD_DISTRIBUTOR_DIV = "//div[contains(text(),'Nhà phân phối')]";
     public static final String ADD_MARKETING_STAFF_DIV = "//div[contains(text(),'NV thị trường')]";
     public static final String ADD_ACCOUNTANT_DIV = "//div[contains(text(),'Kế toán')]";
@@ -248,7 +238,6 @@ public class AdminHomePageUI {
     public static final String BUTTON_BACK = "//p[text()='Quay lại']";
     public static final String DETAIL_TRANSPORT_BUTTON = "(//span[text()='Xem chi tiết'])[1]";
     public static final String DRIVER_NAME = "//p[contains(text(),'Lái xe')]/following-sibling::div//span[@class='vs__selected']";
-    public static final String TRUCK_NAME = "//p[contains(text(),'Xe tải')]/following-sibling::div//span[@class='vs__selected']";
     public static final String DETAIL_DRIVER_NAME = "//p[contains(text(),'Lái xe')]/following-sibling::span";
     public static final String DETAIL_TRUCK_NAME = "//p[contains(text(),'Xe tải')]/following-sibling::span";
     public static final String RANGE_OUT = "//li[contains(text(),'Xe ngoài')]";
@@ -316,4 +305,14 @@ public class AdminHomePageUI {
     public static final String PROVINCE_CITY_NAME = "//div[@class='f aic gap1 mt1 mb05']//span";
     public static final String AREA_NOTE = "//div[@class='f aic gap1']//span";
     public static final String AREA_PROVINCE_CITY_GET_TEXT = "//span[@class='vs__selected']";
+    public static final String STAFF_MANAGEMENT = "//img[@src='/_nuxt/img/staff-manager.da4ac43.svg']";
+    public static final String STAFF_ICON = "//p[text()='Nhân viên']";
+    public static final String ADD_STAFF_BUTTON = "//p[text()='Tạo mới nhân viên']";
+    public static final String COMPLETE_BUTTON = "//button[text()='Hoàn thành']";
+    public static final String WARNING_NAME_STAFF = "//p[contains(text(),'Tên nhân viên')]/following-sibling::div/div/following-sibling::p";
+    public static final String WARNING_PHONE_STAFF = "//p[contains(text(),'Số điện thoại')]/following-sibling::div/div/following-sibling::p";
+    public static final String WARNING_ADRESS_STAFF = "//p[contains(text(),'Địa chỉ làm việc')]/following-sibling::div/div/following-sibling::p";
+    public static final String CONTINUE_BUTTON = "//button[text()='Tiếp tục']";
+    public static final String WARNING_SEX_STAFF = "//p[contains(text(),'Giới tính')]/following-sibling::div/div/following-sibling::p";
+    public static final String WARNING_TAXCODE_STAFF = "//p[contains(text(),'Mã số thuế')]/following-sibling::div/div/following-sibling::p";
 }
