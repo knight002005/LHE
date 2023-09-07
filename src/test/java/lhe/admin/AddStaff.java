@@ -39,7 +39,7 @@ public class AddStaff extends BaseTest {
 
     @Test
     public void TC_01_Goto_Staff_Page(Method method) {
-        ExtentTestManager.startTest(method.getName(), "Go to Transport");
+        ExtentTestManager.startTest(method.getName(), "Go to Staff Page");
         goToHomPage();
         homePage.clickStaffHomePageButton();
         StaffHomePage = homePage.clickStaffIcon();
@@ -47,7 +47,23 @@ public class AddStaff extends BaseTest {
     }
     @Test
     public void TC_02_Add_Staff_EmptyData(Method method) {
-        ExtentTestManager.startTest(method.getName(), "Go to Transport");
+        ExtentTestManager.startTest(method.getName(), "Go to Staff Page");
+        goToHomPage();
+        homePage.clickStaffHomePageButton();
+        StaffHomePage = homePage.clickStaffIcon();
+        StaffHomePage.clickToAddNewStaff();
+        StaffHomePage.clickToCompleteButton();
+        assertTrue(StaffHomePage.warningTitleName());
+        assertTrue(StaffHomePage.warningTitlePhone());
+        assertTrue(StaffHomePage.warningTitleAdress());
+        StaffHomePage.clickToContinueButton();
+        assertTrue(StaffHomePage.warningTitleSex());
+        StaffHomePage.clickToContinueButton();
+        assertTrue(StaffHomePage.warningTitleTaxCode());
+    }
+    @Test
+    public void TC_03_Add_Staff_IsValid(Method method) {
+        ExtentTestManager.startTest(method.getName(), "Go to Staff Page");
         goToHomPage();
         homePage.clickStaffHomePageButton();
         StaffHomePage = homePage.clickStaffIcon();
