@@ -313,7 +313,7 @@ public class AdminHomePageUI {
     public static final String WARNING_PHONE_STAFF = "//p[contains(text(),'Số điện thoại')]/following-sibling::div/div/following-sibling::p";
     public static final String WARNING_ADRESS_STAFF = "//p[contains(text(),'Địa chỉ làm việc')]/following-sibling::div/div/following-sibling::p";
     public static final String CONTINUE_BUTTON = "//button[text()='Tiếp tục']";
-    public static final String WARNING_SEX_STAFF = "//p[contains(text(),'Giới tính')]/following-sibling::div/div/following-sibling::p";
+    public static final String WARNING_SEX_STAFF = "//p[contains(text(),'Giới tính')]/following-sibling::div/div/following-sibling::p[contains(text(),'Vui lòng chọn')]";
     public static final String WARNING_TAXCODE_STAFF = "//p[contains(text(),'Mã số thuế')]/following-sibling::div/div/following-sibling::p";
     public static final String ZONE_BUTTON = "//div[contains(text(),'Khu vực')]";
     public static final String CREATE_ZONE_BUTTON = "//button[@type='button']";
@@ -334,4 +334,12 @@ public class AdminHomePageUI {
     public static final String DETAIL_DISTRIBUTOR_NAME = "//p[@class='p3 mb05']";
     public static final String PROVINCE_CITY_ID_CHOOSE = "(//div[@class='p6 gray-5'])[1]/span";
     public static final String DETAIL_DISTRIBUTOR_ID = "//p[@class='p3 mb05']/following-sibling::p";
+    public static final String WARNING_IDCARD_STAFF = "//p[contains(text(),'CCCD/CMT')]//following-sibling::div/div/following-sibling::p";
+
+    public static final String WARNING_EMAIL = "//p[contains(text(),'Email')]/following-sibling::div/div/following-sibling::p[contains(text(),'Không đúng định dạng email')]";
+    public static final String SEX_DROPLIST = "//input[@placeholder='Chọn giới tính']";
+    public static final String SEX_VALUE = "//li[@id='vs2__option-1']";
+    public static final String ID_CARD_IVALID = "//p[contains(text(),'CCCD/CMT')]/following-sibling::div/div/following-sibling::p[contains(text(),'CMT/CCCD không hợp lệ')]";
+    public static final String ACCOUNT_AFFILIATE = "//input[@placeholder='Chọn tài khoản liên kết']";
+    public static final String ACCOUNT_AFFILIATE_VALUE = "//li[@id='vs5__option-2']";
 }

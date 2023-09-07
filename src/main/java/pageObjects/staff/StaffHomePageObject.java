@@ -1,7 +1,6 @@
 package pageObjects.staff;
 
 import commons.BasePage;
-import pageObjects.admin.driver.AddDriverPageObject;
 import pageUIs.admin.AdminHomePageUI;
 
 public class StaffHomePageObject extends BasePage {
@@ -18,19 +17,22 @@ public class StaffHomePageObject extends BasePage {
         clickToElement(AdminHomePageUI.COMPLETE_BUTTON);
     }
 
-    public boolean warningTitleName() {
+    public String warningTitleName() {
+        waitForLoadingIconInvisible();
         waitForElementVisible(AdminHomePageUI.WARNING_NAME_STAFF);
-        return isElementDisplay(AdminHomePageUI.WARNING_NAME_STAFF);
+        return getElementText(AdminHomePageUI.WARNING_NAME_STAFF);
     }
 
-    public boolean warningTitlePhone() {
+    public String warningTitlePhone() {
+        waitForLoadingItemInvisible();
         waitForElementVisible(AdminHomePageUI.WARNING_PHONE_STAFF);
-        return isElementDisplay(AdminHomePageUI.WARNING_PHONE_STAFF);
+        return getElementText(AdminHomePageUI.WARNING_PHONE_STAFF);
     }
 
-    public boolean warningTitleAdress() {
+    public String warningTitleAdress() {
+        waitForLoadingItemInvisible();
         waitForElementVisible(AdminHomePageUI.WARNING_ADRESS_STAFF);
-        return isElementDisplay(AdminHomePageUI.WARNING_ADRESS_STAFF);
+        return getElementText(AdminHomePageUI.WARNING_ADRESS_STAFF);
     }
 
     public void clickToContinueButton() {
@@ -38,13 +40,53 @@ public class StaffHomePageObject extends BasePage {
         clickToElement(AdminHomePageUI.CONTINUE_BUTTON);
     }
 
-    public boolean warningTitleSex() {
+    public String warningTitleSex() {
+        waitForLoadingItemInvisible();
         waitForElementVisible(AdminHomePageUI.WARNING_SEX_STAFF);
-        return isElementDisplay(AdminHomePageUI.WARNING_SEX_STAFF);
+        return getElementText(AdminHomePageUI.WARNING_SEX_STAFF);
     }
 
-    public boolean warningTitleTaxCode() {
+    public String warningTitleTaxCode() {
+        waitForLoadingItemInvisible();
         waitForElementVisible(AdminHomePageUI.WARNING_TAXCODE_STAFF);
-        return isElementDisplay(AdminHomePageUI.WARNING_TAXCODE_STAFF);
+        return getElementText(AdminHomePageUI.WARNING_TAXCODE_STAFF);
+    }
+
+    public String warningTitleIdCard() {
+        waitForLoadingItemInvisible();
+        waitForElementVisible(AdminHomePageUI.WARNING_IDCARD_STAFF);
+        return getElementText(AdminHomePageUI.WARNING_IDCARD_STAFF);
+    }
+
+    public String warningEmailIsValid() {
+        waitForLoadingItemInvisible();
+        waitForElementVisible(AdminHomePageUI.WARNING_EMAIL);
+        return getElementText(AdminHomePageUI.WARNING_EMAIL);
+    }
+
+    public void clickToSex() {
+        waitForElementVisible(AdminHomePageUI.SEX_DROPLIST);
+        clickToElement(AdminHomePageUI.SEX_DROPLIST);
+    }
+
+    public void clickToValueSex() {
+        waitForElementVisible(AdminHomePageUI.SEX_VALUE);
+        clickToElement(AdminHomePageUI.SEX_VALUE);
+    }
+
+    public String warningIdCard() {
+        waitForLoadingIconInvisible();
+        waitForElementVisible(AdminHomePageUI.ID_CARD_IVALID);
+        return getElementText(AdminHomePageUI.ID_CARD_IVALID);
+    }
+
+    public void clickAffiliateAccount() {
+        waitForElementVisible(AdminHomePageUI.ACCOUNT_AFFILIATE);
+        clickToElement(AdminHomePageUI.ACCOUNT_AFFILIATE);
+    }
+
+    public void clickAffiliateAccountValue() {
+        waitForElementVisible(AdminHomePageUI.ACCOUNT_AFFILIATE_VALUE);
+        clickToElement(AdminHomePageUI.ACCOUNT_AFFILIATE_VALUE);
     }
 }
