@@ -20,8 +20,9 @@ public class AddStaff extends BaseTest {
     private AdminLoginPageObject loginPage;
     private AdminHomePageObject homePage;
     private StaffHomePageObject StaffHomePage;
+    private StaffHomePageObject addTab2StaffHomePage;
     String driverImage, phoneNumber,idCard, nameStaff,warning,warningDrop,adress,emailIvalid,warningIdCard, date;
-    String email;
+    String email, starDate, endDate;
     @BeforeClass
     public void beforeClass() {
         browserName = "chrome";
@@ -38,6 +39,8 @@ public class AddStaff extends BaseTest {
         emailIvalid = "Không đúng định dạng email";
         email = getRandomString() + "@gmail.com";
         date = "9/7/2023";
+        starDate = "9/1/20023";
+        endDate = "9/30/2023";
     }
 
     public void goToHomPage() {
@@ -105,13 +108,24 @@ public class AddStaff extends BaseTest {
         StaffHomePage.inputDynamic("Nhập email",email);
         StaffHomePage.clickAffiliateAccount();
         StaffHomePage.clickAffiliateAccountValue();
-        StaffHomePage.clickToCompleteButton(); //Click button hoan thành
-        StaffHomePage.clickToSex();
-        StaffHomePage.clickToValueSex();
-        StaffHomePage.inputDynamic("Chọn ngày sinh",date);
-        StaffHomePage.inputDynamic("Nhập số CCCD/CMT", "023545654");
-        StaffHomePage.clickToCompleteButton(); //Click button hoan thành
-        StaffHomePage.inputDynamic("Nhập mã số thuế","123254525");
-        StaffHomePage.clickToCompleteButton(); //Click button hoan thành
+        StaffHomePage.clickToRegion();
+        StaffHomePage.clickToRegionValue();
+        StaffHomePage.clickToArea();
+        StaffHomePage.clickToAreaValue();
+        StaffHomePage.clickToPosition();
+        StaffHomePage.clickToPositionValue();
+        StaffHomePage.clickToManage();
+        StaffHomePage.clickToManageValue();
+        StaffHomePage.inputDynamic("Chọn ngày bắt đầu làm việc",starDate);
+        StaffHomePage.inputDynamic("Chọn ngày chấm dứt làm việc",endDate);
+        StaffHomePage.clickToContinueButton();//Click button hoan thành
+        addTab2StaffHomePage = StaffHomePage.clickToSex();
+        addTab2StaffHomePage.clickToValueSex();
+        addTab2StaffHomePage.inputDynamic("Chọn ngày sinh",date);
+        addTab2StaffHomePage.inputDynamic("Nhập số CCCD/CMT", "023545654");
+        addTab2StaffHomePage.clickToCompleteButton(); //Click button hoan thành
+        addTab2StaffHomePage.inputDynamic("Nhập mã số thuế","123254525");
+        addTab2StaffHomePage.clickToCompleteButton(); //Click button hoan thành
     }
+
 }

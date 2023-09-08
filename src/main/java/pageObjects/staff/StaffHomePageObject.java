@@ -3,6 +3,8 @@ package pageObjects.staff;
 import commons.BasePage;
 import pageUIs.admin.AdminHomePageUI;
 
+import static commons.GlobalConstants.THREE_SECONDS;
+
 public class StaffHomePageObject extends BasePage {
     public StaffHomePageObject() {
     }
@@ -18,7 +20,6 @@ public class StaffHomePageObject extends BasePage {
     }
 
     public String warningTitleName() {
-        waitForLoadingIconInvisible();
         waitForElementVisible(AdminHomePageUI.WARNING_NAME_STAFF);
         return getElementText(AdminHomePageUI.WARNING_NAME_STAFF);
     }
@@ -64,20 +65,16 @@ public class StaffHomePageObject extends BasePage {
         return getElementText(AdminHomePageUI.WARNING_EMAIL);
     }
 
-    public void clickToSex() {
-        waitForElementVisible(AdminHomePageUI.SEX_DROPLIST);
-        clickToElement(AdminHomePageUI.SEX_DROPLIST);
-    }
-
     public void clickToValueSex() {
-        waitForElementVisible(AdminHomePageUI.SEX_VALUE);
+        sleepInSecond(THREE_SECONDS);
+        waitForElementClickable(AdminHomePageUI.SEX_VALUE);
         clickToElement(AdminHomePageUI.SEX_VALUE);
     }
 
     public String warningIdCard() {
         waitForLoadingIconInvisible();
-        waitForElementVisible(AdminHomePageUI.ID_CARD_IVALID);
-        return getElementText(AdminHomePageUI.ID_CARD_IVALID);
+        waitForElementVisible(AdminHomePageUI.ID_CARD_IS_VALID);
+        return getElementText(AdminHomePageUI.ID_CARD_IS_VALID);
     }
 
     public void clickAffiliateAccount() {
@@ -86,7 +83,59 @@ public class StaffHomePageObject extends BasePage {
     }
 
     public void clickAffiliateAccountValue() {
-        waitForElementVisible(AdminHomePageUI.ACCOUNT_AFFILIATE_VALUE);
+        waitForElementClickable(AdminHomePageUI.ACCOUNT_AFFILIATE_VALUE);
         clickToElement(AdminHomePageUI.ACCOUNT_AFFILIATE_VALUE);
+    }
+
+    public void clickToRegion() {
+        waitForElementVisible(AdminHomePageUI.REGION_INPUT_DROPLIST);
+        clickToElement(AdminHomePageUI.REGION_INPUT_DROPLIST);
+    }
+
+    public void clickToRegionValue() {
+        sleepInSecond(THREE_SECONDS);
+        waitForElementClickable(AdminHomePageUI.REGION_INPUT_VALUE_DROPLIST);
+        clickToElement(AdminHomePageUI.REGION_INPUT_VALUE_DROPLIST);
+    }
+
+    public void clickToArea() {
+        waitForElementVisible(AdminHomePageUI.AREA_INPUT_DROPLIST);
+        clickToElement(AdminHomePageUI.AREA_INPUT_DROPLIST);
+    }
+
+    public void clickToAreaValue() {
+        sleepInSecond(THREE_SECONDS);
+        waitForElementClickable(AdminHomePageUI.AREA_INPUT_VALUE_DROPLIST);
+        clickToElement(AdminHomePageUI.AREA_INPUT_VALUE_DROPLIST);
+    }
+
+    public void clickToPosition() {
+        scrollToElement(AdminHomePageUI.POSITION_INPUT);
+        waitForElementVisible(AdminHomePageUI.POSITION_INPUT);
+        clickToElement(AdminHomePageUI.POSITION_INPUT);
+    }
+
+    public void clickToPositionValue() {
+        sleepInSecond(THREE_SECONDS);
+        waitForElementClickable(AdminHomePageUI.POSITION_INPUT_VALUE);
+        clickToElement(AdminHomePageUI.POSITION_INPUT_VALUE);
+    }
+
+    public void clickToManage() {
+        waitForLoadingIconInvisible();
+        waitForElementVisible(AdminHomePageUI.MANAGE_INPUT);
+        clickToElement(AdminHomePageUI.MANAGE_INPUT);
+    }
+
+    public void clickToManageValue() {
+        sleepInSecond(THREE_SECONDS);
+        waitForElementClickable(AdminHomePageUI.MANAGE_INPUT_VALUE);
+        clickToElement(AdminHomePageUI.MANAGE_INPUT_VALUE);
+    }
+
+    public StaffHomePageObject clickToSex() {
+            waitForElementVisible(AdminHomePageUI.SEX_DROP_LIST);
+            clickToElement(AdminHomePageUI.SEX_DROP_LIST);
+            return new StaffHomePageObject();
     }
 }

@@ -337,9 +337,19 @@ public class AdminHomePageUI {
     public static final String WARNING_IDCARD_STAFF = "//p[contains(text(),'CCCD/CMT')]//following-sibling::div/div/following-sibling::p";
 
     public static final String WARNING_EMAIL = "//p[contains(text(),'Email')]/following-sibling::div/div/following-sibling::p[contains(text(),'Không đúng định dạng email')]";
-    public static final String SEX_DROPLIST = "//input[@placeholder='Chọn giới tính']";
+    public static final String SEX_DROP_LIST = "//input[@placeholder='Chọn giới tính']";
     public static final String SEX_VALUE = "//li[@id='vs2__option-1']";
-    public static final String ID_CARD_IVALID = "//p[contains(text(),'CCCD/CMT')]/following-sibling::div/div/following-sibling::p[contains(text(),'CMT/CCCD không hợp lệ')]";
+    public static final String ID_CARD_IS_VALID = "//p[contains(text(),'CCCD/CMT')]/following-sibling::div/div/following-sibling::p[contains(text(),'CMT/CCCD không hợp lệ')]";
     public static final String ACCOUNT_AFFILIATE = "//input[@placeholder='Chọn tài khoản liên kết']";
     public static final String ACCOUNT_AFFILIATE_VALUE = "//li[@id='vs5__option-2']";
+    public static final String REGION_INPUT_DROPLIST = "//input[@placeholder='Chọn vùng']";
+    public static final String REGION_INPUT_VALUE_DROPLIST = "//li[@id='vs6__option-2']";
+    public static final String AREA_INPUT_DROPLIST = "//input[@placeholder='Chọn khu vực']";
+    public static final String AREA_INPUT_VALUE_DROPLIST = "//li[@id='vs7__option-1']";
+//    public static final String POSITION_INPUT = "//input[@placeholder='Chọn chức vụ']";
+    public static final String POSITION_INPUT = "//input[@placeholder='Chọn chức vụ']/parent::div";
+//    public static final String POSITION_INPUT_VALUE = "//li[@id='vs11__option-0']";
+    public static final String POSITION_INPUT_VALUE = "(//li[@class='vs__dropdown-option'])[1]";
+    public static final String MANAGE_INPUT = "//input[@placeholder='Chọn người quản lý']";
+    public static final String MANAGE_INPUT_VALUE = "//li[@id='vs12__option-1']";
 }
