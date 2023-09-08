@@ -254,6 +254,7 @@ public class AdminHomePageUI {
     public static final String RANGE_OUT = "//li[contains(text(),'Xe ngoài')]";
     public static final String INPUT_BY_PLACEHOLDER = "//input[@placeholder='%s']";
     public static final String DETAIL_DRIVER_NAME_OUT = "//p[contains(text(),'Lái xe')]/following-sibling::span";
+
     //  Document Management Page
     public static final String DOCUMENT_MANAGEMENT = "//img[@src='/_nuxt/img/document.78474f2.svg']";
     public static final String DOCUMENT_TEXT = "//span[contains(text(),'Tài liệu')]";
