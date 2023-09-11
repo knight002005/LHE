@@ -32,8 +32,8 @@ public class StaffHomePageObject extends BasePage {
 
     public String warningTitleAdress() {
         waitForLoadingItemInvisible();
-        waitForElementVisible(AdminHomePageUI.WARNING_ADRESS_STAFF);
-        return getElementText(AdminHomePageUI.WARNING_ADRESS_STAFF);
+        waitForElementVisible(AdminHomePageUI.WARNING_ADDRESS_STAFF);
+        return getElementText(AdminHomePageUI.WARNING_ADDRESS_STAFF);
     }
 
     public void clickToContinueButton() {

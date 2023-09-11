@@ -312,7 +312,7 @@ public class AdminHomePageUI {
     public static final String COMPLETE_BUTTON = "//button[text()='Hoàn thành']";
     public static final String WARNING_NAME_STAFF = "//p[contains(text(),'Tên nhân viên')]/following-sibling::div/div/following-sibling::p";
     public static final String WARNING_PHONE_STAFF = "//p[contains(text(),'Số điện thoại')]/following-sibling::div/div/following-sibling::p";
-    public static final String WARNING_ADRESS_STAFF = "//p[contains(text(),'Địa chỉ làm việc')]/following-sibling::div/div/following-sibling::p";
+    public static final String WARNING_ADDRESS_STAFF = "//p[contains(text(),'Địa chỉ làm việc')]/following-sibling::div/div/following-sibling::p";
     public static final String CONTINUE_BUTTON = "//button[text()='Tiếp tục']";
     public static final String WARNING_SEX_STAFF = "//p[contains(text(),'Giới tính')]/following-sibling::div/div/following-sibling::p[contains(text(),'Vui lòng chọn')]";
     public static final String WARNING_TAXCODE_STAFF = "//p[contains(text(),'Mã số thuế')]/following-sibling::div/div/following-sibling::p";
