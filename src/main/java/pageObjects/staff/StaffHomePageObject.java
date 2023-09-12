@@ -83,6 +83,7 @@ public class StaffHomePageObject extends BasePage {
     }
 
     public void clickAffiliateAccountValue() {
+        sleepInSecond(THREE_SECONDS);
         waitForElementClickable(AdminHomePageUI.ACCOUNT_AFFILIATE_VALUE);
         clickToElement(AdminHomePageUI.ACCOUNT_AFFILIATE_VALUE);
     }
@@ -134,6 +135,7 @@ public class StaffHomePageObject extends BasePage {
     }
 
     public StaffHomePageObject clickToSex() {
+            scrollToTopPage();
             waitForElementVisible(AdminHomePageUI.SEX_DROP_LIST);
             clickToElement(AdminHomePageUI.SEX_DROP_LIST);
             return new StaffHomePageObject();

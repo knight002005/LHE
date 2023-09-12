@@ -398,7 +398,10 @@ public class BasePage {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
         jsExecutor.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
-
+    public void scrollToTopPage() {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
+        jsExecutor.executeScript("window.scrollTo(0,0)");
+    }
     public void highlightElement(String locatorType) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) DriverManager.getDriver();
         WebElement element = this.getWebElement(locatorType);
